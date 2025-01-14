@@ -121,12 +121,35 @@ h4{
     max-width: 288px;
 }
 
-.cards{
+.cards {
     display: flex;
     width: 100%;
     align-items: flex-start;
     align-content: flex-start;
     gap: 35px 30px;
     flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+
+.cards p{
+    min-height: 40px;
+}
+
+.links{
+    width: 100%;
+    display: flex;
     justify-content: space-between;
+}
+
+.destaque_link{
+    color: FFC107;
+}
+
+.destaque{
+    border: 2px solid #FFC107;
+}
+
+.card-project img{
+    max-width: 270px;
+    width: 100%;
 }
