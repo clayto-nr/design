@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+p {
+    color: #6C757D;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h3, h4 {
+    color: #495057;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.user-card {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    display: flex;
+    background-color: #fff;
+}
+
+.user-card img {
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-user {
+    width: 100%;
+    max-width: 800px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    gap: 16px;
+    flex-direction: column;
+    display: flex;
+}
+
+.projects {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.projects-header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 24px;
+    padding-top: 24px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-texts h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-texts p {
+    font-size: 14px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlighted {
+    border: 2px solid #FFC107;
+    border-radius: 8px;
+}
+
+.highlight-link {
+    color: #FFC107;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .projects-header h3 {
+        font-size: 20px;
+    }
+
+    .projects-list {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .about-user {
+        padding: 16px;
+    }
+}
+
+.about-user p {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.about-user p:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.about-user p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.about-user p:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
